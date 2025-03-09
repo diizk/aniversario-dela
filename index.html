@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./assets/love_heart_dessert_cake_food_sweets_cupcake_valentine_icon_262164.ico" type="image/x-icon">
+    <title>Landing Page</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="menu">
+            <a href="#home" class="link_menu">Home</a>
+            <a href="#carta" class="link_menu">Carta</a>
+            <a href="#fotos" class="link_menu">Nossas Fotos</a>
+        </nav>
+    </header>
+    <div class="bg_heart">
+    </div>   
+    <main class="conteudo" id="home">
+        <section class="conteudo_home">
+            <h1 class="titulo">
+                Esse é o meu presente para você: Parabéns Princesa!
+            </h1>
+            <img src="./assets/header.jpeg" alt="" class="conteudo_home_imagem">
+        </section>
+        <section class="conteudo_carta" id="carta">
+            <h1><a href="#" class="titulo_link">Uma carta para você</a></h1>
+            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nemo doloribus ab obcaecati ut dolor id voluptates, necessitatibus amet tempora dignissimos deleniti facilis illo non, excepturi quisquam pariatur quibusdam a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore qui vel consequuntur explicabo optio provident obcaecati, eos corrupti officia earum enim quos! Cum porro deleniti libero reiciendis saepe illum nulla?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente iure aliquam consectetur? Harum debitis similique nesciunt quia cumque ex porro iste. Sint dolorem distinctio dolorum ratione adipisci. Laudantium, qui recusandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum laboriosam perspiciatis facere officia! Rem quae magnam reiciendis incidunt, doloribus voluptas voluptatem aliquid aut quam, ipsum fugiat tempora cum mollitia distinctio.</p>
+        </section>
+        <section class="conteudo_fotos" id="fotos">
+            <h1><a href="#" class="titulo_link">Nossas lembranças</a></h1>
+            <div class="container_imagem">
+                <img src="./assets/1.jpeg" alt="" class="imagem_foto">
+                <img src="./assets/2.jpeg" alt="" class="imagem_foto">
+                <img src="./assets/3.jpeg" alt="" class="imagem_foto">
+                <img src="./assets/4.png" alt="" class="imagem_foto">
+                <img src="./assets/5.jpeg" alt="" class="imagem_foto">
+                <img src="./assets/6.jpeg" alt="" class="imagem_foto">
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p class="texto_rodape">Criado em Março de 2025</p>
+        <p class="texto_rodape">Desenvolvido por Lucas Nunes</p>
+    </footer>
+    <script>
+        var love = setInterval(function(){
+            var r_num = Math.floor(Math.random() * 40) + 1;
+            var r_size = Math.floor(Math.random() * 65) + 10;
+            var r_left = Math.floor(Math.random() * 100) + 1;
+            var r_bg = Math.floor(Math.random() * 25) + 100;
+            var r_time = Math.floor(Math.random() * 5) + 5;
+
+            $('.bg_heart').append("<div class='heart' style='width:"+r_size+"px;height:"+r_size+"px;left:"+r_left+"%;background:rgba(255,"+(r_bg-25)+","+r_bg+",1);-webkit-animation:love "+r_time+"s ease;-moz-animation:love "+r_time+"s ease;-ms-animation:love "+r_time+"s ease;animation:love "+r_time+"s ease'></div>");
+        
+            $('.bg_heart').append("<div class='heart' style='width:"+(r_size-10)+"px;height:"+(r_size-10)+"px;left:"+(r_left+r_num)+"%;background:rgba(255,"+(r_bg-25)+","+(r_bg+25)+",1);-webkit-animation:love "+(r_time+5)+"s ease;-moz-animation:love "+(r_time+5)+"s ease;-ms-animation:love "+(r_time+5)+"s ease;animation:love "+(r_time+5)+"s ease'></div>");
+        },500);
+    </script>
+</body>
+</html>
